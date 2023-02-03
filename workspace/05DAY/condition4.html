@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+                    3. html 파일생성
+
+                id 를 prompt 통해 입력받고
+                usertest1 , usertest2 , usertest3 셋 중 하나라면
+                    인증되었습니다 alert
+                아니라면 인증실패 alert
+            
+        */ 
+
+        var id = prompt('아이디를 입력해주세요')
+
+        if( id == "usertest1" || id == "usertest2" ||  id == "usertest3"){
+            alert('인증되었습니다');
+
+        } else{
+            alert('인증 실패 ');
+        }
+    </script>
+</body>
+</html>

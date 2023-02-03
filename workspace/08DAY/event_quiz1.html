@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>10+50 = <span id="question">?</span></h1>
+
+    <!-- 1.  클릭했을 때 결과값을 넣어준다.  -->
+    <input type="button" value="이벤트 결과확인" onclick=calc() />
+
+    <script>
+        function calc(){
+            alert('test')
+            let mytag = document.getElementById('question')
+            mytag.innerHTML = 60 
+        }
+    </script>
+</body>
+</html>

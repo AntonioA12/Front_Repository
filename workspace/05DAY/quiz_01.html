@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            2단 부터 9단까지 출력 
+
+        <h1></h1>
+             <ul>
+                <li></li>
+             </ul>
+
+        */
+
+        var a = 2 ; 
+        var b = 1;
+        var result ;
+
+        for ( var i = a ; i <= 9 ; i ++){
+            document.write("<h1>" + i + "단" + "</br>");
+            document.write("</br>") ; 
+            for( var j = b  ; j <=9 ; j ++){
+
+                result = i * j ;
+                document.write("<ul><li>"+ i + " X " + j + "= " + result +"</li></ul>")
+                
+                             
+            } 
+        }
+    </script>
+</body>
+
+
+</html>

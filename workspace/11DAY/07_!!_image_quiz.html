@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- 베너영역 -->
+    <div id="banner">
+        <a href="#" id="banner-link" target="_blank">
+            <img src="" id="banner-img" width="320" />
+        </a>
+    </div>    
+
+    <script>
+        // 이미지 클릭시 랜덤 이미지 + 고정 사이트 링크 
+
+        // 배너 이미지와 클릭시 ulr 을 담은 배열
+        let banner = [
+            { img : 'img/1.jpg' , url: 'http://www.naver.com'},
+            { img : 'img/2.jpg' , url: 'http://www.google.com'},
+            { img : 'img/3.jpg' , url: 'http://www.daum.net'},
+            { img : 'img/4.jpg' , url: 'http://www.oracle.com'}
+        ]
+
+        // 두 인자 값 사이의 랜덤값을 리턴하는 함수
+        
+        function random( n1, n2){
+            return Math.floor( Math.random() * ( n2 - n1 + 1 ) )
+            // 또는 return parseInt( Math.random() * ( n2 - n1 + 1))
+        }
+
+
+        // 배너 항목들의 임의의 요소 하나를 선택해서
+        // href 와 <img>의 src 에 요소를 추가하는 함수 
+        function random_banner(){   
+            // 0 ~ 배열값 만큼 랜덤 숫자 
+            let ranCnt = random( 0 , banner.length -1 ) // 랜덤값 범위 
+            // 데이터 중 하나 선택
+            let item = banner[ranCnt]
+            // 배너 적용
+            $('#banner-link').attr('href' , item.url)
+            $('#banner-img').attr('src', item.img)
+        
+        }
+
+        // 페이지가 열리고 바로 호출될 함수 ( onload 같이 )
+        $(function(){
+
+            // 랜덤 배너 함수
+            random_banner();
+
+            // 일정시간마다 새로고침(배너변경)
+            setInterval( function(){
+                random_banner()
+            }, 1000)
+        })
+    </script>
+</body>
+</html>

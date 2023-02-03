@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Date 객체에 임의의 날짜/시간 정하기
+
+        const days = [ '일' , '월' , '화' , '수' ,'목' , '금' , '토' ,]
+
+        let mydate = new Date();
+
+        // Date 객체안에 저장된 시각을 임의의날짜로 변경하기 
+        mydate.setFullYear(2021)
+        mydate.setMonth(1)
+        mydate.setDate(7)
+        mydate.setHours(4)
+        mydate.setMinutes(52)
+        mydate.setSeconds(34)
+
+        // 
+
+        let yy = mydate.getFullYear();
+        let mm = mydate.getMonth() +1
+        let dd = mydate.getDate()
+        let i = mydate.getDay()
+        let day = days[i]
+
+        let hh = mydate.getHours()
+        let mi = mydate.getMinutes()
+        let ss = mydate.getSeconds()
+
+        const result = yy + " 년 " + mm + " 월 " + dd + " 일 " + day +" 요일 "+  hh + ":"  + mi + ": " + ss 
+        document.write(result)
+    </script>
+</body>
+</html>

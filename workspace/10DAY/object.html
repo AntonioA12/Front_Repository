@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<body>
+    <ul id="list">
+        <li>empty</li>
+        <li>empty</li>
+        <li>empty</li>
+        <li>empty</li>
+        <li>empty</li>
+    </ul>
+
+    <input id="execute_btn" type="button" value="execute"></input>
+
+
+    <script>
+        // 버튼 클릭시 empty -> happy coding 으로 변경되도록 
+
+        $('#execute_btn').click( function(){
+            $("#list li").text('happy coding');
+        }
+
+        );
+
+        // document.getElementById('execute_btn') = $('execute_btn')
+        // id = # /  class = . 
+    </script>
+</body>
+</html>

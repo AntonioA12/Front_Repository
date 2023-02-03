@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            1. function 을 사용해 
+            math 에 있는 random() 을 사용해 
+            5자리 인증번호 생성 및 출력 
+
+            ex ) 00159 
+
+            2. function 을 사용해 
+            가위 , 바위 , 보  -> 랜덤으로 출력 
+
+        */
+
+        // n1 ~ n2 사이 난수를 리턴하는 함수 
+        // n1 = 최소값 n2 = 최대값 ex) 1~5 사이 랜덤한 한자리 숫자 출력 
+        function random( n1 , n2 ){
+            return  Math.floor((Math.random() *  ( n2 - n1 + 1)) + n1 ) ;
+        }
+
+        let auth= ""
+
+        for ( let i = 0 ; i < 5 ; i ++){
+            auth += random(0,9)
+        }
+
+        document.write("<h1>")
+            document.write("인증번호 =" + auth + "</br>")
+        document.write("</h1>")
+        
+        function RSP(){
+            let array = [ '가위' , '바위' , '보'] 
+
+            let i = Math.floor( Math.random() * 3 )
+            document.write( array[i])
+           
+        }
+
+       
+        RSP()
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="target" action="result.html">
+        <label for="name"> name </label>
+        <input id="name" type="text" />
+        <input type="submit" id="submit">
+    </form>
+
+    <script>
+        // 값이 없으면 alert 메세지 출력
+        // 값이 있다면 아무것도 일어나지 않음
+
+        let t = document.getElementById('target')
+        t.addEventListener('submit' , function() {
+            if ( document.getElementById('name').value.length == 0  ){
+                alert('비어 있음 ')
+                // 비어있는 값이 서버전송에 막기 위함 
+                eventObject.preventDefault(); 
+            }
+        })
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var id = prompt("아이디를 입력해주세요");
+        
+        if ( id == 'usertest'){
+            var pw = prompt('패스워드를 입력해주세요')
+            if ( pw == 1234){
+                alert('인증완료되었습니다')
+            }else{
+                alert('잘못된 pw 입니다.')
+            }
+        } else{
+            alert('잘못된 id 입니다. ')
+        }
+    
+            
+        /*
+            1. 
+            아이디를 입력 받는 prompt,
+            아이디가 usertest 인경우
+            passward를 입력받는다 
+
+            passward 가 1234 인경우 인증완료 메세지와 함께 alert
+            password 가 1234가 아닌경우 인증에 실패했다는 메세지가 함께 alert
+
+            아이디가 usertest가 아닌경우
+                인증에 실패하였습니다. alert  
+
+            2. condition3.html 생성
+                아이디와 pw 를 prompt 를 사용해 각각 입력받는다 
+                id 가 usertest 이고 , pw 가 1234 라면 
+                    인증완료 + alert
+                id 가 usertest 아니거나 pw 가 1234가 아니라면
+                    인증실패 + alert 
+
+            3. html 파일생성
+
+                id 를 prompt 통해 입력받고
+                usertest1 , usertest2 , usertest3 셋 중 하나라면
+                    인증되었습니다 alert
+                아니라면 인증실패 alert
+            
+        */ 
+    </script>
+</body>
+</html>

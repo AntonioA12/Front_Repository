@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>jQuery</title>
+</head>
+<body>    
+    <form id="myform">
+        <div>
+            <label for='username'>사용자이름</label>
+            <input type='text' name='username' id='username' />
+        </div>
+        <div>
+            <label for='userpass'>비밀번호</label>
+            <input type='password' name='userpass' id='userpass' />
+        </div>
+        <button type="submit">입력값 확인</button>
+        <hr />
+
+        <!-- 선택결과를 표시할 div -->
+        <div id="result"></div>
+    </form>
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $('#myform').submit( function(e) {
+            e.preventDefault();
+
+            let username = $('#username').val();
+
+            if( !username){
+                alert("이름을 입력하세요")
+                $('#username').focus()
+                return false
+            }
+
+            let userpw = $('#userpass').val()
+            
+            if ( ! userpw) {
+                alert("pw 입력하세요")
+                $('#userpass').focus()
+                return false  
+            }
+
+            // 입력값 화면에 표시하기
+
+            $('#result').append("<div>이름 :" + username + "<div>")
+            $('#result').append("<div>패스워드 :" + userpw + "<div>")
+
+            // 백엔드 페이지에 데이터 전송해야 할 경우 사용
+            // $(this).submit();
+        })
+       
+    </script>
+</body>
+
+</html>

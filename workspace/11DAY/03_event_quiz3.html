@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>숨기기, 보이기</h1>
+    <button id="hide">문장 숨기기</button>
+    <button id="show">문장 보이기</button>
+
+    <p>문장</p>
+
+    <script>
+        $('#hide').on('click' , function(){
+            $('p').hide(1000)
+        })
+
+        $('#show').on('click' , function(){
+            $('p').show("fast")
+        })
+    </script>
+</body>
+</html>

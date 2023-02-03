@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<style>
+    .selected{
+        background-color: tomato !important;
+        color: white;
+        border : 2px solid red !important; 
+    }
+</style>
+</head>
+<body>
+    <ul>
+        <li id="html_ID">HTML</li>
+        <li class="select_Class">css</li>
+        <li>JS</li>
+        <li>PHP</li>
+        <li id="mySQL_ID">mySQL</li>
+    </ul>
+    
+    <script>
+        // id
+        // addClass('class 이름')
+        $('#html_ID').addClass('selected')
+
+        // 복수선택
+
+        $('#mySQL_ID , .select_Class').addClass('selected')
+    </script>
+</body>
+</html>

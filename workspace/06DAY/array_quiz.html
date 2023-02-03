@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            1.
+            name 파라미터를 설정하여 name 이 몇번 카운트 되는지 체크하는 함수 생성
+            ex)  '이재영' 이라는 이름이 몇번 반복되는지 체크하는 함수 생성 
+
+            2. 
+            중복된 이름을 제거한 이름을 출력
+
+            결과 값 : 권종표,강상희,김지완,최승혁,이성연,박영서,송정환,김재성
+        */
+
+        let s = [
+            '이유덕', '이재영', '권종표', '이재영', '박민호', '강상희',
+            '이재영', '김지완', '최승혁', '이성연', '박영서',
+            '박민호', '전경헌', '송정환', '김재성', '이유덕', '전경헌'
+        ];
+
+        function NameCheck( param){
+            let name = param 
+            let count = 0 
+
+            for( let i = 0 ; i < s.length ; i ++){
+                if( s[i] == name ){
+                    count += 1 
+                }
+            }
+            return name + " = " + count 
+        }
+        
+        document.write( NameCheck('이재영'))  
+
+        // 2. 
+
+        function NameDelete(){
+            let uniq = [] ;
+
+            for ( let i = 0 ; i < s.length ; i ++ ){
+                let uniq_cnt = 0 ;
+
+                for ( let j = 0 ; j < s.length ; j ++){
+                    if ( s[i] == s[j] ){
+                        uniq_cnt ++ 
+
+                    }
+                }
+
+                // 2 보다 작으면 = 1개밖에 없는 이름 
+                if ( uni_cnt < 2 ){
+                    uniq.push(s[i])
+                }
+            }
+
+            return uniq
+
+        }
+        
+        document.write( NameDelete() )
+    </script>
+</body>
+</html>

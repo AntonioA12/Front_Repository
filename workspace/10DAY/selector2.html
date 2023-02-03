@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<style>
+    .selected{
+        background-color: tomato !important;
+        color: white;
+        border : 2px solid red !important; 
+    }
+</style>
+</head>
+<body>
+    <ul id="list">
+        <li >HTML</li>
+        <li>css</li>
+        <li>JS</li>
+        <li>PHP</li>
+        <li >mySQL</li>
+    </ul>
+    
+    <script>
+        // 여러개 적용
+        // list 라는 id를 가진 태그안에 있는 모든 태그 
+
+        // $('.list').addClass('.selected')
+
+        // 태그 안에 있는 index 를 통해 
+        // li:eq() 원하는 부분만 제어하기 ( 배열의 index )
+        // $('#list li:eq(2)').addClass('selected')
+
+        // 인자보다 인덱스가 큰 element를 찾아내는 선택자
+        // li:gt(1) index가 (1) 보다 큰 모든요소 제어하기 
+        // $('#list li:gt(1)').addClass('selected')
+
+        // li:lt(2) index가 (2) 보다 작은 모든 요소 제어
+        // $('#list li:lt(2)').addClass('selected')
+
+        // 홀수,짝수  인덱스 선택하기
+        // li:even , li:odd
+
+        // li:first ( 첫번째 인덱스 선택 ) li:last( 마지막 index 선택 )
+        
+    </script>
+</body>
+</html>

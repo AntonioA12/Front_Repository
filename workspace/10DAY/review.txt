@@ -1,0 +1,49 @@
+Jquery 라이브러리 호출
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+Jquery 제어 ( 셀렉터 )
+
+    $('태그명')
+    $('#id')
+    $('.class')
+
+    // 세부 제어 가능
+    // 세부 제어가 우선시 된다.
+
+    $('태그명 .class')
+    $('태그명 #id')
+
+Jquery 제어 index
+
+    선언한 $(제어) 에서 
+    index 를 통해 동일한 $(제어) 에도
+    원하는 부분만 따로 설정가능
+
+    li:eq(n)    n번째 태그 제어
+    li:gt(n)    n보다 큰 index 모두 제어        n<
+    li:lt(n)    n보다 작은 index 모두 제어      n>
+    li:even , li:odd    짝수,홀수
+    li:first , li:last  첫 번째, 마지막
+
+attr
+
+    A 태그에서 각각 element 마다 제어&설정하는 기능
+    ( id , class 제외 )
+        ex) <input type="butten"  herf = ''  target = '' asd = '' 
+
+        $().attr('herf' , ' 설정 값' )
+            attr ('target' , 설정값)
+            . . . 
+            복수 설정 가능
+
+event 적용하기
+
+    $().이벤트명 
+
+    $().bind
+    
+    $().on( '이벤트' , function(){
+
+    })
+

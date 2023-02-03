@@ -1,0 +1,136 @@
+J-Query - 목요일 시작 
+
+
+Object Model
+
+	웹브라우저의 구성요소들은 하나하나 객체화 되어있다.
+	JS 로 이 객체를 제어해서 웹 브라우저를 제어할 수 있게 된다. 
+
+	HTML 에 접근할 때 사용하는 개념 
+
+Window 
+
+	전역 객체 
+	최상위 개념
+
+	ex) 
+	이클립스에서 Java.lang 같은
+
+DOM  ( Document Object Model ) 
+
+	
+
+BOM ( Browser Object Model ) 
+
+	브라우저 해당되는 ( http, frame , 위치  등 ) 담겨진
+
+Java Script Model
+
+	JS 객체 ( 역할 기능 ) 이 담겨짐 	
+
+Window.open & close
+
+	window.open ( open 할 페이지.html  , 페이지 이름 , 사이즈 및 여러옵션 지정 )
+	
+	사이즈 및 여러옵션 지정을 통해 팝업창 사이즈를 정할 수 있다.	
+		ex) 광고 페이지, 작은 회원가입 페이지 등 
+
+location.href
+
+location 새로고침
+
+<body onload = " 함수명() " > 
+
+	onload 를 통해
+	페이지가 최초 실행될 때 해당 함수를 실행시킬 수 있다 ( 시작하자마자 )
+
+String 객체의 indexOf 
+
+	() 해당 문자열의 처음 나타나는 위치값을 리턴
+	만약 문자열을 찾지 못하였다면 -1 리턴
+
+	indexOf 함수의 리턴값이 -1 보다 크면
+	해당 문자열이 존재한다는 의미 
+	해당 단어가 포함되어 있는지 없는지 확인할 때 사용 
+
+Document - HTML 문서를 제어하는 내장객체 
+
+	특정 HTML 요소를 객체형태로 가져오기
+	Document 객체는 HTML 문서를 제어하기 위하여 특정 HTML 태그 요소를 
+	[ID 값] 에 의해 객체 형태로 가져오는 기능을 제공 
+
+
+
+innerHTML - HTML 요소의 내용을 제어하기
+
+	객체화된 HTML 요소의 innerHTML 속성을 사용하면 해당 태그에 속해있는 내용을
+	새롭게 설정할 수 있다.
+
+	document.getElementById("auth").innerHTML = "<h1> document 통해 HTML 적용할 내용 </h1>"
+
+Style - CSS 요소 제어 
+
+	JS 안에 Style 메소드를 통해 CSS 요소 또한 변경할 수 있다.
+
+	elemnet.Style.CSS 대응속성 = "CSS적용값 " 
+
+id 값으로 접근하기 
+
+	let elemnet = Document.getElementByID('id 속성값 이름')
+
+tag 이름으로 접근하기 
+
+	let elemnet = document.getElementsByTagName('태그이름')
+
+class 이름으로 접근하기
+
+	let elemnet = document.getElementsByClassName('클래스 이름')
+
+이벤트
+
+	특정 상황이 발생했을 때 호출되도록 
+	사용자가 정의한 함수들 
+
+이벤트 적용 
+
+Inline 방식
+
+	해당 태그에 이벤트적용시킨다 = 
+	<input type="button" '이벤트이름' = " function() " />
+
+
+프로퍼티 리스너 방식 
+
+	인라인 방식에과 달리 HTML 과 JS 를 분리할 수 있다
+	HTML 은 그대로 두고 ( 단, 지명할 수 있는 무언가는 필요함 ( id,tag,class))
+
+	JS 태그 안에서 
+	이벤트를 적용한다 
+
+이벤트 객체 - eventObject 
+
+	이벤트가 실행된 맥락의 정보가 필요할 때는
+	이벤트 객체를 사용한다. 
+
+	인자 값 (파라미터) 에 적용한다
+	따로 객체를 할당하는 것이 아닌
+	기존에 있는 최상위객체 이다 
+	
+addEventListener() 방식
+
+	가장 권장하는 방식
+	 HTML 과 JS 가 분리되어있으며 
+
+	특정 이벤트 제거 ( 태그, id 또는 클래스 지명 필요  )
+	 	removeEventListener
+
+이벤트 취소
+
+	liline 방식, property 방식에서 
+
+	이벤트 안에 함수를 적용하고 함수에
+	어떠한 조건에 False 적용함으로 이벤트 실행을 막음  
+	( Inline 은 HTML 안에, property는 Script 태그안에 )
+
+	Listener 방식에서 취소 
+		addEventListener : event.preventDefault(); 

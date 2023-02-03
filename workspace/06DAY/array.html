@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 배열 선언
+        let myarray = ["HTML" , "CSS", "javaScript"];
+
+        // 배열값 읽기
+        document.write("<h1>")
+            document.write(myarray[0] + "</br>")
+            document.write(myarray[1] + "</br>")
+            document.write(myarray[2] + "</br>")
+        document.write("</h1>")
+        
+        // 배열값 재할당
+        
+        myarray[0] = "Java"
+        myarray[1] = "JSP"
+        myarray[2] = "Spring"
+
+        document.write("<h1>")
+            document.write(myarray[0] + "</br>")
+            document.write(myarray[1] + "</br>")
+            document.write(myarray[2] + "</br>")
+        document.write("</h1>")
+
+
+        //반복문 통한 배열 값 출력
+
+        for( var i = 0 ; i <myarray.length ; i ++ ){
+            document.write("<h1>")
+            document.write(myarray[i] + "</br>")
+        document.write("</h1>")
+        }
+
+        </script>
+</body>
+</html>
